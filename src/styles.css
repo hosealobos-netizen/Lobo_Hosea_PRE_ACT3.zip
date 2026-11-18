@@ -1,0 +1,82 @@
+/* Global styles: apply to every component in the application. */
+:root {
+  --paper: #f4efe6;
+  --card: #fffaf0;
+  --ink: #1d1b16;
+  --muted: #6b6558;
+  --line: #cdbfa6;
+  --accent: #d2461f;
+  --teal: #1f5f5b;
+  --sun: #f2b84b;
+  --display: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, Arial, sans-serif;
+  --mono: 'DM Mono', ui-monospace, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(29, 27, 22, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+section {
+  margin: 28px 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+/* Shared heading style, used by Header, Skills, App and Footer. */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--line);
+}
+
+/* Shared "works!" checkpoint message (Checkpoint 2 screenshot). */
+.works {
+  margin: 16px 0;
+  padding: 14px 18px;
+  border: 2px dashed var(--teal);
+  border-radius: 12px;
+  color: var(--teal);
+  font-family: var(--mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

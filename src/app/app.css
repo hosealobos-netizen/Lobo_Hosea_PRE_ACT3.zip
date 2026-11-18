@@ -1,0 +1,30 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+.interaction {
+  --line: rgba(29, 27, 22, 0.35);
+  padding: 24px 28px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: var(--sun);
+}
+
+.message {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 16px 14px 36px;
+  }
+
+  .message {
+    font-size: 1.2rem;
+  }
+}

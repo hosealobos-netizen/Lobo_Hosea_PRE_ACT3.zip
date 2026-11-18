@@ -1,0 +1,38 @@
+@if (checkpoint()) {
+  <p class="works">footer works!</p>
+} @else {
+  <footer class="footer">
+    <section id="proficiencies">
+      <h2 class="section-title">Technical Proficiencies</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of proficiencies(); track item.tool) {
+            <tr>
+              <td>{{ item.tool }}</td>
+              <td>
+                <span class="dots" aria-hidden="true">
+                  @for (n of [1, 2, 3]; track n) {
+                    <i [class.on]="n <= score(item.level)"></i>
+                  }
+                </span>
+                <span class="level">{{ item.level }}</span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <div class="bottom">
+      <p class="copyright">&copy; {{ year }} {{ fullName() }}. Built with Angular.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+}

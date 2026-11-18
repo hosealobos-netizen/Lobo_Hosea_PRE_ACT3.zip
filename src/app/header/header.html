@@ -1,0 +1,31 @@
+@if (checkpoint()) {
+  <p class="works">header works!</p>
+} @else {
+  <header id="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="mark" href="#top">{{ initials() }}</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#proficiencies">Proficiencies</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <p class="tag">PORTFOLIO</p>
+      <h1>{{ fullName() }}</h1>
+      <p class="role">{{ role() }}</p>
+
+      <ul class="contact">
+        <li><span class="pill">{{ location() }}</span></li>
+        <li><a class="pill" [href]="'tel:' + phone()">{{ phone() }}</a></li>
+        <li><a class="pill" [href]="'mailto:' + email()">{{ email() }}</a></li>
+      </ul>
+    </div>
+
+    <section class="profile">
+      <h2 class="section-title">Personal Profile</h2>
+      <p>{{ profile() }}</p>
+    </section>
+  </header>
+}

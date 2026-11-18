@@ -1,0 +1,24 @@
+@if (checkpoint()) {
+  <p class="works">skills works!</p>
+} @else {
+  <section id="skills">
+    <h2 class="section-title">Key Skills</h2>
+    <p class="hint">Tap a skill to select it.</p>
+
+    <ul>
+      @for (skill of skills(); track skill; let i = $index) {
+        <li>
+          <button
+            type="button"
+            class="skill"
+            [class.active]="active() === skill"
+            [attr.aria-pressed]="active() === skill"
+            (click)="selectSkill(skill)">
+            <span class="num">{{ i + 1 }}</span>
+            {{ skill }}
+          </button>
+        </li>
+      }
+    </ul>
+  </section>
+}

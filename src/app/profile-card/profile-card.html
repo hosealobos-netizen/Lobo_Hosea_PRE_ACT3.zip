@@ -1,0 +1,10 @@
+<section class="card" id="about">
+  <span class="label">PERSONAL PROFILE</span>
+  <h2>{{ cardTitle }}</h2>
+
+  @for (text of paragraphs; track text) {
+    <p>{{ text }}</p>
+  }
+
+  <span class="tag">Angular 22 · Reusable component</span>
+</section>

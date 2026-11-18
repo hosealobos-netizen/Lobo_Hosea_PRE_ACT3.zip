@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  margin: 28px 8px 36px 0;
+}
+
+.card {
+  margin: 0;
+  padding: 30px 32px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.label {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+
+h2 {
+  margin: 6px 0 14px;
+  font-family: var(--display);
+  font-size: 1.9rem;
+}
+
+p {
+  max-width: 68ch;
+  margin: 0 0 12px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--sun);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}

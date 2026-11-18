@@ -1,0 +1,132 @@
+:host {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.mark {
+  padding: 2px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.links a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.links a:hover {
+  border-color: var(--accent);
+}
+
+.hero {
+  position: relative;
+  padding: 56px 0 28px;
+}
+
+.hero::after {
+  content: 'Hello!';
+  position: absolute;
+  top: 44px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 4px 4px 0 var(--ink);
+  color: #ffffff;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-style: italic;
+  transform: rotate(12deg);
+}
+
+.tag {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+}
+
+h1 {
+  max-width: 13ch;
+  margin: 0 0 16px;
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.role {
+  margin: 0 0 24px;
+  color: var(--teal);
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+a.pill:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.profile p {
+  max-width: 62ch;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 700px) {
+  .hero::after {
+    display: none;
+  }
+
+  .links {
+    gap: 12px;
+  }
+}
